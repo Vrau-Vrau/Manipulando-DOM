@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Mudar Texto</title>
+</head>
+<body>
+  <p id="frase">Esta é a frase padrão.</p>
+  <button id="mudarTexto">Mudar Texto</button>
+
+  <script>
+    const frase = document.getElementById('frase');
+    const botao = document.getElementById('mudarTexto');
+
+    botao.addEventListener('click', () => {
+      const novoTexto = prompt('Digite o novo texto:');
+      if (novoTexto) {
+        frase.innerText = novoTexto;
+      }
+    });
+  </script>
+</body>
+</html>

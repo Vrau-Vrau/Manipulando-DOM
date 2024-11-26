@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Mudar Texto com Tecla</title>
+</head>
+<body>
+  <p id="mensagem">Pressione uma tecla...</p>
+
+  <script>
+    const mensagem = document.getElementById('mensagem');
+
+    document.addEventListener('keydown', (event) => {
+      mensagem.innerText = `Você pressionou: ${event.key}`;
+    });
+  </script>
+</body>
+</html>

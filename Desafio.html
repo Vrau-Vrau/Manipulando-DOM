@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Criação de Lista</title>
+</head>
+<body>
+  <button id="adicionarItem">Adicionar Item</button>
+  <ul id="lista"></ul>
+
+  <script>
+    const botaoAdicionar = document.getElementById('adicionarItem');
+    const lista = document.getElementById('lista');
+
+    botaoAdicionar.addEventListener('click', () => {
+      const item = prompt('Digite o item a ser adicionado:');
+      if (item) {
+        const li = document.createElement('li');
+        li.innerText = item;
+        lista.appendChild(li);
+      }
+    });
+  </script>
+</body>
+</html>

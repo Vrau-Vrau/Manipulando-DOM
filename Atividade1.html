@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Alterar Cor ao Clicar</title>
+</head>
+<body>
+  <div id="quadrado1" style="width: 100px; height: 100px; background-color: red; margin: 10px;"></div>
+  <div id="quadrado2" style="width: 100px; height: 100px; background-color: green; margin: 10px;"></div>
+  <div id="quadrado3" style="width: 100px; height: 100px; background-color: blue; margin: 10px;"></div>
+
+  <script>
+    const quadrado1 = document.getElementById('quadrado1');
+    const quadrado2 = document.getElementById('quadrado2');
+    const quadrado3 = document.getElementById('quadrado3');
+
+    function alterarCor(quadrado) {
+      if (quadrado.style.backgroundColor === 'red') {
+        quadrado.style.backgroundColor = 'yellow';
+      } else {
+        quadrado.style.backgroundColor = 'red';
+      }
+    }
+
+    quadrado1.addEventListener('click', () => alterarCor(quadrado1));
+    quadrado2.addEventListener('click', () => alterarCor(quadrado2));
+    quadrado3.addEventListener('click', () => alterarCor(quadrado3));
+  </script>
+</body>
+</html>

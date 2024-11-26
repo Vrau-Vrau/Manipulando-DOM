@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Eleições Municipais</title>
+</head>
+<body>
+  <button id="votar">Votar</button>
+  <div id="resultado"></div>
+
+  <script>
+    const candidatos = {
+      1: { nome: 'Candidato A', foto: 'https://via.placeholder.com/100' },
+      2: { nome: 'Candidato B', foto: 'https://via.placeholder.com/100' },
+      3: { nome: 'Candidato C', foto: 'https://via.placeholder.com/100' }
+    };
+
+    let votos = { 1: 0, 2: 0, 3: 0 };
+
+    const botaoVotar = document.getElementById('votar');
+    const resultado = document.getElementById('resultado');
+
+    botaoVotar.addEventListener('click', () => {
+      const numeroCandidato = prompt('Digite o número do candidato (1, 2 ou 3):');
+
+      if (candidatos[numeroCandidato]) {
+        votos[numeroCandidato]++;
+        const candidato = candidatos[numeroCandidato];
+        resultado.innerHTML = `
+          <p>Nome: ${candidato.nome}</p>
+          <img src="${candidato.foto}" alt="Foto do candidato">
+          <p>Confirmar?</p>
+        `;
+      } else {
+        resultado.innerHTML = '<p>Voto nulo</p>';
+      }
+
+      console.log('Votos:', votos);
+    });
+  </script>
+</body>
+</html>

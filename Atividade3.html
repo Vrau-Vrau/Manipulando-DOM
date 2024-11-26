@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Mostrar/Ocultar Texto</title>
+</head>
+<body>
+  <button id="mostrarOcultar">Mostrar</button>
+  <p id="texto" style="display: none;">Esta é a frase escondida!</p>
+
+  <script>
+    let visivel = false;
+    const botao = document.getElementById('mostrarOcultar');
+    const texto = document.getElementById('texto');
+
+    botao.addEventListener('click', () => {
+      visivel = !visivel;
+      texto.style.display = visivel ? 'block' : 'none';
+      botao.innerText = visivel ? 'Ocultar' : 'Mostrar';
+    });
+  </script>
+</body>
+</html>
